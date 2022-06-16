@@ -19,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
       - name: Run tests
-        run: py -m unittest CalculatorTest.py
+        run: python -m unittest CalculatorTest.py
   # Run tests in windows
   test-windows:
     runs-on: windows-latest
@@ -53,4 +53,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
       - name: Run tests
-        run: py -m unittest CalculatorTest.py
+        run: python -m unittest CalculatorTest.py
