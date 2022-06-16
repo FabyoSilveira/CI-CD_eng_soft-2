@@ -18,3 +18,8 @@ class CalculatorTest(TestCase):
   def test_div(self):
     self.assertEqual(2, self.calc.div(4,2))
 
+  def test_sum_after_mult(self):
+    multResutl = self.calc.mult(4,5)
+
+    self.assertEqual(24, self.calc.sum(4,multResutl))
+
