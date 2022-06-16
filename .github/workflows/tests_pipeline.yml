@@ -1,0 +1,32 @@
+name: Run tests
+
+on: push
+
+jobs:
+  # Run tests in ubuntu
+  test-ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: py -m unittest CalculatorTest.py
+  # Run tests in windows
+  test-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: py -m unittest CalculatorTest.py
+  # Run tests in macos
+  test-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: py -m unittest CalculatorTest.py
